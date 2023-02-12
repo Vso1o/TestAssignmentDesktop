@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "rAy7Qu7TqCrK4JlOnF6+jxSwLeDq2RShyJXMR1wpzzLBFPGNRkTrDphyB6fg/h2x967ud00IIANj6gFAw9kdTg==",
+  "dgSpecHash": "NyWbKnOwylGLXWi9jM91KQxi0bAw0XIf0q8xE//u0rbPiVz95T59DZxqkBsD87ZxbTu4jHgh2+q4L6AznXWPFw==",
   "success": true,
   "projectFilePath": "E:\\Programming\\Own\\Experiments\\TestAssignmentDesktop\\TestAssignmentDesktop.Console\\TestAssignmentDesktop.Console.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Vsolo\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

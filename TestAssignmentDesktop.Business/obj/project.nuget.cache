@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "EyHrsbdn2xlp54qsbYK7F7w2z6HgECC1ZWbZoCXrlfGCRB1Ofo3hvUVKzjHNjDq3PvBmaHbPBrNe3ETYA91wsg==",
+  "dgSpecHash": "9GlgoDh7EdeggX/8edSRM0ppmFTbQlaaj2cBKY1MiJ6fSaXIgFQle2sjlYWOOWRBZheMAhAdTtLmOZoMsVIPgA==",
   "success": true,
   "projectFilePath": "E:\\Programming\\Own\\Experiments\\TestAssignmentDesktop\\TestAssignmentDesktop.Business\\TestAssignmentDesktop.Business.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Vsolo\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

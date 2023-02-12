@@ -1,0 +1,12 @@
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Core\bin\Debug\net6.0\TestAssignmentDesktop.Core.deps.json
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Core\bin\Debug\net6.0\TestAssignmentDesktop.Core.dll
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Core\bin\Debug\net6.0\TestAssignmentDesktop.Core.pdb
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Core\obj\Debug\net6.0\TestAssignmentDesktop.Core.csproj.AssemblyReference.cache
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Core\obj\Debug\net6.0\TestAssignmentDesktop.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Core\obj\Debug\net6.0\TestAssignmentDesktop.Core.AssemblyInfoInputs.cache
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Core\obj\Debug\net6.0\TestAssignmentDesktop.Core.AssemblyInfo.cs
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Core\obj\Debug\net6.0\TestAssignmentDesktop.Core.csproj.CoreCompileInputs.cache
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Core\obj\Debug\net6.0\TestAssignmentDesktop.Core.dll
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Core\obj\Debug\net6.0\refint\TestAssignmentDesktop.Core.dll
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Core\obj\Debug\net6.0\TestAssignmentDesktop.Core.pdb
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Core\obj\Debug\net6.0\ref\TestAssignmentDesktop.Core.dll

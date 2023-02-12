@@ -1,0 +1,15 @@
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Business\bin\Debug\net6.0\TestAssignmentDesktop.Business.deps.json
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Business\bin\Debug\net6.0\TestAssignmentDesktop.Business.dll
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Business\bin\Debug\net6.0\TestAssignmentDesktop.Business.pdb
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Business\bin\Debug\net6.0\TestAssignmentDesktop.Core.dll
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Business\bin\Debug\net6.0\TestAssignmentDesktop.Core.pdb
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Business\obj\Debug\net6.0\TestAssignmentDesktop.Business.csproj.AssemblyReference.cache
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Business\obj\Debug\net6.0\TestAssignmentDesktop.Business.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Business\obj\Debug\net6.0\TestAssignmentDesktop.Business.AssemblyInfoInputs.cache
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Business\obj\Debug\net6.0\TestAssignmentDesktop.Business.AssemblyInfo.cs
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Business\obj\Debug\net6.0\TestAssignmentDesktop.Business.csproj.CoreCompileInputs.cache
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Business\obj\Debug\net6.0\TestAssignmentDesktop.Business.csproj.CopyComplete
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Business\obj\Debug\net6.0\TestAssignmentDesktop.Business.dll
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Business\obj\Debug\net6.0\refint\TestAssignmentDesktop.Business.dll
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Business\obj\Debug\net6.0\TestAssignmentDesktop.Business.pdb
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.Business\obj\Debug\net6.0\ref\TestAssignmentDesktop.Business.dll
