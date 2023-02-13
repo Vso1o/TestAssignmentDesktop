@@ -1,3 +1,9 @@
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\obj\Debug\net6.0-windows\TestAssignmentDesktop.WPF.csproj.AssemblyReference.cache
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\obj\Debug\net6.0-windows\Views\MainWindow.g.cs
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\obj\Debug\net6.0-windows\App.g.cs
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\obj\Debug\net6.0-windows\TestAssignmentDesktop.WPF_MarkupCompile.cache
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\obj\Debug\net6.0-windows\TestAssignmentDesktop.WPF_MarkupCompile.lref
 E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\bin\Debug\net6.0-windows\TestAssignmentDesktop.WPF.exe
 E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\bin\Debug\net6.0-windows\TestAssignmentDesktop.WPF.deps.json
 E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\bin\Debug\net6.0-windows\TestAssignmentDesktop.WPF.runtimeconfig.json
@@ -8,12 +14,6 @@ E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\b
 E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\bin\Debug\net6.0-windows\TestAssignmentDesktop.Core.dll
 E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\bin\Debug\net6.0-windows\TestAssignmentDesktop.Business.pdb
 E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\bin\Debug\net6.0-windows\TestAssignmentDesktop.Core.pdb
-E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\obj\Debug\net6.0-windows\TestAssignmentDesktop.WPF.csproj.AssemblyReference.cache
-E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\obj\Debug\net6.0-windows\Views\MainWindow.g.cs
-E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\obj\Debug\net6.0-windows\App.g.cs
-E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
-E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\obj\Debug\net6.0-windows\TestAssignmentDesktop.WPF_MarkupCompile.cache
-E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\obj\Debug\net6.0-windows\TestAssignmentDesktop.WPF_MarkupCompile.lref
 E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\obj\Debug\net6.0-windows\Views\MainWindow.baml
 E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\obj\Debug\net6.0-windows\TestAssignmentDesktop.WPF.g.resources
 E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\obj\Debug\net6.0-windows\TestAssignmentDesktop.WPF.GeneratedMSBuildEditorConfig.editorconfig
@@ -26,3 +26,7 @@ E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\o
 E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\obj\Debug\net6.0-windows\TestAssignmentDesktop.WPF.pdb
 E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\obj\Debug\net6.0-windows\TestAssignmentDesktop.WPF.genruntimeconfig.cache
 E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\obj\Debug\net6.0-windows\ref\TestAssignmentDesktop.WPF.dll
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\obj\Debug\net6.0-windows\Views\UserControls\CryproCurrencyDetails.g.cs
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\obj\Debug\net6.0-windows\Views\UserControls\CryptoCurrencyList.g.cs
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\obj\Debug\net6.0-windows\Views\UserControls\CryproCurrencyDetails.baml
+E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\obj\Debug\net6.0-windows\Views\UserControls\CryptoCurrencyList.baml

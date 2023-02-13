@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 E:\Programming\Own\Experiments\TestAssignmentDesktop\TestAssignmentDesktop.WPF\App.xaml
-1-1644662438
+3-624608696
 
-6-540757833
+11-836881200
 197709591534
-Views\MainWindow.xaml;
+Views\MainWindow.xaml;Views\UserControls\CryproCurrencyDetails.xaml;Views\UserControls\CryptoCurrencyList.xaml;
 
 False
 
