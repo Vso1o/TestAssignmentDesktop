@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "xeTVMzacsEBxKMdpfD1EC0sRcC6CGr8g9dq/MWl6jAGpxigSa72sHV1A0Dvct4P+LRcaFH2UFJEAFNuFPtn1LA==",
+  "success": true,
+  "projectFilePath": "E:\\Programming\\Own\\Experiments\\TestAssignmentDesktop\\TestAssignmentDesktop.WPF\\TestAssignmentDesktop.WPF.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Vsolo\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
