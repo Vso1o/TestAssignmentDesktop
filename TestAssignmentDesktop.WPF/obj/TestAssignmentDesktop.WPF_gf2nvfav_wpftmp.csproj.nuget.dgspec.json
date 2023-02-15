@@ -1,0 +1,190 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\Programming\\Own\\Experiments\\TestAssignmentDesktop\\TestAssignmentDesktop.WPF\\TestAssignmentDesktop.WPF.csproj": {}
+  },
+  "projects": {
+    "E:\\Programming\\Own\\Experiments\\TestAssignmentDesktop\\TestAssignmentDesktop.Business\\TestAssignmentDesktop.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Programming\\Own\\Experiments\\TestAssignmentDesktop\\TestAssignmentDesktop.Business\\TestAssignmentDesktop.Business.csproj",
+        "projectName": "TestAssignmentDesktop.Business",
+        "projectPath": "E:\\Programming\\Own\\Experiments\\TestAssignmentDesktop\\TestAssignmentDesktop.Business\\TestAssignmentDesktop.Business.csproj",
+        "packagesPath": "C:\\Users\\Vsolo\\.nuget\\packages\\",
+        "outputPath": "E:\\Programming\\Own\\Experiments\\TestAssignmentDesktop\\TestAssignmentDesktop.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Vsolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\Programming\\Own\\Experiments\\TestAssignmentDesktop\\TestAssignmentDesktop.Core\\TestAssignmentDesktop.Core.csproj": {
+                "projectPath": "E:\\Programming\\Own\\Experiments\\TestAssignmentDesktop\\TestAssignmentDesktop.Core\\TestAssignmentDesktop.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Programming\\Own\\Experiments\\TestAssignmentDesktop\\TestAssignmentDesktop.Core\\TestAssignmentDesktop.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Programming\\Own\\Experiments\\TestAssignmentDesktop\\TestAssignmentDesktop.Core\\TestAssignmentDesktop.Core.csproj",
+        "projectName": "TestAssignmentDesktop.Core",
+        "projectPath": "E:\\Programming\\Own\\Experiments\\TestAssignmentDesktop\\TestAssignmentDesktop.Core\\TestAssignmentDesktop.Core.csproj",
+        "packagesPath": "C:\\Users\\Vsolo\\.nuget\\packages\\",
+        "outputPath": "E:\\Programming\\Own\\Experiments\\TestAssignmentDesktop\\TestAssignmentDesktop.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Vsolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Programming\\Own\\Experiments\\TestAssignmentDesktop\\TestAssignmentDesktop.WPF\\TestAssignmentDesktop.WPF.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Programming\\Own\\Experiments\\TestAssignmentDesktop\\TestAssignmentDesktop.WPF\\TestAssignmentDesktop.WPF.csproj",
+        "projectName": "TestAssignmentDesktop.WPF",
+        "projectPath": "E:\\Programming\\Own\\Experiments\\TestAssignmentDesktop\\TestAssignmentDesktop.WPF\\TestAssignmentDesktop.WPF.csproj",
+        "packagesPath": "C:\\Users\\Vsolo\\.nuget\\packages\\",
+        "outputPath": "E:\\Programming\\Own\\Experiments\\TestAssignmentDesktop\\TestAssignmentDesktop.WPF\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Vsolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {
+              "E:\\Programming\\Own\\Experiments\\TestAssignmentDesktop\\TestAssignmentDesktop.Business\\TestAssignmentDesktop.Business.csproj": {
+                "projectPath": "E:\\Programming\\Own\\Experiments\\TestAssignmentDesktop\\TestAssignmentDesktop.Business\\TestAssignmentDesktop.Business.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

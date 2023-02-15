@@ -30,12 +30,26 @@ namespace TestAssignmentDesktop.WPF.ViewModels
         }
 
         public DetailsViewModel DetailsViewModel { get; set; }
+        public HomePageViewModel HomePageViewModel { get; set; }
 
         public MainViewModel()
         {
             Title= "CryptoCurrency Observer";
             DetailsViewModel = new DetailsViewModel();
-            DetailsViewModel.Id = 14;
+            HomePageViewModel = new HomePageViewModel();
+            DetailsViewModel.ChangePage += ChangePageEventHandler;
+            HomePageViewModel.ChangePage += ChangePageEventHandler;
+            HomePageViewModel.ChangeSelecetedModel += ChangeSelectedCurrencyEventHandler;
+        }
+
+        private void ChangePageEventHandler(int pageId)
+        {
+            PageId = pageId;
+        }
+
+        private void ChangeSelectedCurrencyEventHandler(CryptoCurrencyModel model)
+        {
+            DetailsViewModel.SelectedCurrencyModel = model;
         }
     }
 }

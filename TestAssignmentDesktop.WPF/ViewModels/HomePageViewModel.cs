@@ -12,15 +12,41 @@ using TestAssignmentDesktop.WPF.Commands;
 using TestAssignmentDesktop.WPF.Models;
 using TestAssignmentDesktop.WPF.ViewModels.Base;
 using System.Windows.Data;
+using System.ComponentModel;
+using System.Windows;
 
 namespace TestAssignmentDesktop.WPF.ViewModels
 {
     public class HomePageViewModel : BaseViewModel
     {
         #region properties
-        private List<CryptoCurrencyModel> _rawCryptoCurrencyModels = new List<CryptoCurrencyModel>();
+        public event Action<int> ChangePage;
+        public event Action<CryptoCurrencyModel> ChangeSelecetedModel;
+
+        private CryptoCurrencyModel _currencyModel;
+        public CryptoCurrencyModel SelectedCurrencyModel
+        {
+            get { return _currencyModel; }
+            set
+            {
+                _currencyModel = value;
+                ChangeSelecetedModel.Invoke(value);
+                OnPropertyChanged();
+            }
+        }
+
+        private ICollectionView _currenciesCollectionView;
+        public ICollectionView CurrenciesCollectionView
+        {
+            get { return _currenciesCollectionView; }
+            set
+            {
+                _currenciesCollectionView = value;
+                OnPropertyChanged();
+            }
+        }
+
         private ObservableCollection<CryptoCurrencyModel> _cryptoCurrencyModels = new ObservableCollection<CryptoCurrencyModel>();
-        private CollectionView collectionView;//Develop this idea
         public ObservableCollection<CryptoCurrencyModel> CryptoCurrencyModels
         {
             get { return _cryptoCurrencyModels; }
@@ -31,7 +57,19 @@ namespace TestAssignmentDesktop.WPF.ViewModels
             }
         }
 
-        private int _shownCurrenciesCount = 10;
+        private string _collectionSearchingFilter = string.Empty;
+        public string SearchingFilterText
+        {
+            get { return _collectionSearchingFilter; }
+            set
+            {
+                _collectionSearchingFilter = value;
+                OnPropertyChanged();
+                CurrenciesCollectionView.Refresh();
+            }
+        }
+
+        private int _shownCurrenciesCount = 50;
         public int ShownCurrenciesCount
         {
             get { return _shownCurrenciesCount; }
@@ -39,7 +77,7 @@ namespace TestAssignmentDesktop.WPF.ViewModels
             {
                 _shownCurrenciesCount = value;
                 OnPropertyChanged();
-                ChangeShownModelsCount();
+                CurrenciesCollectionView.Refresh();
             }
         }
 
@@ -55,16 +93,8 @@ namespace TestAssignmentDesktop.WPF.ViewModels
         }
         #endregion
         #region commands
-        public ICommand ChangeDisplayedCountCommand
-        {
-            get
-            {
-                return new ActionCommand(() =>
-                {
-                    ChangeShownModelsCount();
-                });
-            }
-        }
+        private ICommand _changePageCommand;
+        public ICommand ChangePageCommand => _changePageCommand ?? (_changePageCommand = new ActionCommand(() => ChangePage(2)));
         #endregion
 
         public HomePageViewModel()
@@ -76,47 +106,54 @@ namespace TestAssignmentDesktop.WPF.ViewModels
 
         private ICryptoInfoReceiver GetProvider(DataProviders provider)
         {
+            //App is only compatible with CoinCap API due to returned data difference
             return provider switch
             {
                 DataProviders.Coincap => new CoinCapReceiver(),
                 DataProviders.Coingecko => throw new NotImplementedException(),
-                DataProviders.Cryptingup => throw new NotImplementedException(),
+                DataProviders.Cryptingup => new CryptingUpReceiver(),
                 _ => new CoinCapReceiver()
             };
         }
 
-        private void GetInitialAssets()
+        private async Task GetInitialAssets()
         {
             var receiver = GetProvider(DataProviders.Coincap);
 
-            var rawList = receiver.ReceiveAllAssets().Result;
+            var rawList = await receiver.ReceiveAllAssets();
 
             var result = new ObservableCollection<CryptoCurrencyModel>();
 
-            rawList.ForEach(asset => _rawCryptoCurrencyModels.Add(CryptoCurrencyModel.ConvertFromBase(asset)));
+            rawList = rawList.OrderBy(x => x.Rank).ToList();
 
-            _rawCryptoCurrencyModels = _rawCryptoCurrencyModels.OrderBy(x => x.Rank).ToList();
-
-            int shownCount = _rawCryptoCurrencyModels.Count() >= _shownCurrenciesCount ? _shownCurrenciesCount : _rawCryptoCurrencyModels.Count();
-
-            _rawCryptoCurrencyModels.GetRange(0, shownCount).ForEach(x => result.Add(x));
+            rawList.ForEach(asset => result.Add(CryptoCurrencyModel.ConvertFromBase(asset)));
 
             CryptoCurrencyModels = result;
+
+            SetUpCollectionView();
         }
 
-        private void GetAssets(DataProviders dataProvider)
+        private async Task GetAssets(DataProviders dataProvider)
         {
             CryptoCurrencyModels.Clear();
-            _rawCryptoCurrencyModels.Clear();
-            GetInitialAssets();
+            await GetInitialAssets();
         }
 
-        private void ChangeShownModelsCount()
+        private void SetUpCollectionView()
         {
-            var result = new ObservableCollection<CryptoCurrencyModel>();
-            int shownCount = _rawCryptoCurrencyModels.Count() >= _shownCurrenciesCount ? _shownCurrenciesCount : _rawCryptoCurrencyModels.Count();
-            _rawCryptoCurrencyModels.GetRange(0, shownCount).ForEach(x => result.Add(x));
-            CryptoCurrencyModels = result;
+            CurrenciesCollectionView = CollectionViewSource.GetDefaultView(_cryptoCurrencyModels);
+            CurrenciesCollectionView.Filter = SearchingFilter;
+        }
+
+        private bool SearchingFilter(object obj)
+        {
+            if(obj is CryptoCurrencyModel currencyModel)
+            {
+                return (currencyModel.Name.Contains(_collectionSearchingFilter)
+                    || currencyModel.Code.Contains(_collectionSearchingFilter))
+                    && currencyModel.Rank <= _shownCurrenciesCount;
+            }
+            return false;
         }
     }
 }

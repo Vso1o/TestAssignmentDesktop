@@ -23,11 +23,10 @@ namespace TestAssignmentDesktop.Business.CrytoInfoReceiver
 
             if (!_httpUtil.IsSuccessfulStatusCode(response))
             {
-                //show error message
+                //show error message or throw exception
 
                 return null;
             }
-            //Console.WriteLine(response.Content.ReadAsStringAsync().Result);
             var specificList = JsonConvert.DeserializeObject<CoinCapResponseModel>(response.Content.ReadAsStringAsync().Result).Data;
 
             specificList.ForEach(x => result.Add(x.ConvertToBase()));

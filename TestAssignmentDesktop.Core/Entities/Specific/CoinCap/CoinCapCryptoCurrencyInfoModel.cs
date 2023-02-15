@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestAssignmentDesktop.Core.Entities.Specific.CoinCap
 {
-    public class CoinCapCryptoCurrencyInfoModel
+    public class CoinCapCryptoCurrencyInfoModel : ICryptoInfoModel
     {
         public string? Key { get; set; } //Description
         public string? Id { get; set; } //unique identifier for asset
@@ -23,7 +23,14 @@ namespace TestAssignmentDesktop.Core.Entities.Specific.CoinCap
 
         public BaseCryptoCurrencyInfoModel ConvertToBase()
         {
-            return new BaseCryptoCurrencyInfoModel { CurrencyCode = Id, CurrencyName = Name, USDValue = PriceUsd ?? 0, Rank = Rank ?? -1 };
+            return new BaseCryptoCurrencyInfoModel { 
+                CurrencyCode = Id, 
+                CurrencyName = Name, 
+                USDValue = PriceUsd ?? 0, 
+                Rank = Rank ?? -1,
+                PriceChange = ChangePercent24Hr,
+                Volume = VolumeUsd24Hr
+            };
         }
     }
 }

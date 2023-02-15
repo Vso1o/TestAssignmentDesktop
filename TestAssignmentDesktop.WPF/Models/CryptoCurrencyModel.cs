@@ -14,6 +14,9 @@ namespace TestAssignmentDesktop.WPF.Models
         public double USDValue { get; set; }
         public int Rank { get; set; }
 
+        public double? Volume { get; set; }
+        public double? PriceChange { get; set; }
+
         public static CryptoCurrencyModel ConvertFromBase(BaseCryptoCurrencyInfoModel item)
         {
             return new CryptoCurrencyModel 
@@ -22,6 +25,8 @@ namespace TestAssignmentDesktop.WPF.Models
                 Name = item.CurrencyName, 
                 USDValue = item.USDValue,
                 Rank = item.Rank,
+                Volume = item.Volume,
+                PriceChange = item.PriceChange,
             };
         }
     }

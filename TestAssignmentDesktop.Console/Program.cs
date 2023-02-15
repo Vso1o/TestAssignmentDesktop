@@ -1,6 +1,6 @@
 ﻿using TestAssignmentDesktop.Business.CrytoInfoReceiver;
 
-var receiver = new CoinCapReceiver();
+var receiver = new CryptingUpReceiver();
 
 var list = receiver.ReceiveAllAssets().Result;
 

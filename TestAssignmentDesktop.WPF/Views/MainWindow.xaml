@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestAssignmentDesktop.WPF"
         xmlns:vuc="clr-namespace:TestAssignmentDesktop.WPF.Views.UserControls"
-        xmlns:v="clr-namespace:TestAssignmentDesktop.WPF.Views"
         xmlns:vm="clr-namespace:TestAssignmentDesktop.WPF.ViewModels" xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="{Binding Title}" Height="400" Width="700"
+        Title="{Binding Title}" 
+        Height="420" 
+        Width="840"
+        ResizeMode="NoResize"
         Name="Window">
     
 
@@ -23,7 +25,7 @@
                     <Setter Property="ContentTemplate">
                         <Setter.Value>
                             <DataTemplate>
-                                <vuc:CryptoCurrencyList/>
+                                <vuc:CryptoCurrencyList DataContext="{Binding ElementName=Window, Path=DataContext.HomePageViewModel}"/>
                             </DataTemplate>
                         </Setter.Value>
                     </Setter>

@@ -7,61 +7,109 @@
              xmlns:vm="clr-namespace:TestAssignmentDesktop.WPF.ViewModels"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <UserControl.DataContext>
-        <vm:HomePageViewModel/>
-    </UserControl.DataContext>
-
     <Grid Margin="10,10,10,10" Height="360" VerticalAlignment="Top">
         <Grid.RowDefinitions>
             <RowDefinition Height="50px"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="50px"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <ComboBox SelectedItem="{Binding ShownCurrenciesCount}"
-                  Grid.Row="0" 
-                  Grid.Column="1"
-                  VerticalAlignment="Center"
-                  HorizontalAlignment="Left"
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="0" 
+                    Grid.Column="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left">
+            <TextBlock Text="Show from top"
+                       Height="25"
+                       FontSize="16"
+                       Margin="35,0,0,0"/>
+
+            <ComboBox SelectedItem="{Binding ShownCurrenciesCount}"
+                  
                   Margin="10"
                   Height="25"
                   FontSize="16"
-                  Width="100"
+                  Width="60"
                   SelectedIndex="0">
 
-            <ComboBox.ItemsSource>
-                <x:Array Type="{x:Type sys:Int32}">
-                    <sys:Int32>10</sys:Int32>
-                    <sys:Int32>25</sys:Int32>
-                    <sys:Int32>50</sys:Int32>
-                    <sys:Int32>100</sys:Int32>
-                    <sys:Int32>200</sys:Int32>
-                </x:Array>
-            </ComboBox.ItemsSource>
-        </ComboBox>
+                <ComboBox.ItemsSource>
+                    <x:Array Type="{x:Type sys:Int32}">
+                        <sys:Int32>10</sys:Int32>
+                        <sys:Int32>25</sys:Int32>
+                        <sys:Int32>50</sys:Int32>
+                        <sys:Int32>100</sys:Int32>
+                        <sys:Int32>200</sys:Int32>
+                    </x:Array>
+                </ComboBox.ItemsSource>
+            </ComboBox>
 
-        <DataGrid ItemsSource="{Binding CryptoCurrencyModels}" 
+            <TextBlock Text="Start typing to search"
+                       Height="25"
+                       FontSize="16"
+                       Margin="20,0,0,0"/>
+
+            <TextBox Text="{Binding SearchingFilterText, UpdateSourceTrigger=PropertyChanged}" 
+                 HorizontalAlignment="Center" 
+                 Width="250px"
+                 Margin="10"
+                 Height="25"/>
+        </StackPanel>
+
+        <StackPanel x:Name="BottomPanel"
+                    Orientation="Horizontal"
+                    Grid.Row="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left">
+
+            <StackPanel x:Name="NavPanel"
+                    Orientation="Vertical"
+                    Grid.Row="1"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Center"
+                    Width="200"
+                    Margin="10">
+                <TextBlock x:Name="Explanationlabel"
+                        Text="Selected currency:"
+                        FontSize="18px"
+                        Height="30"
+                        Margin="20,0,0,0"/>
+                <TextBlock x:Name="CurrencyCodeTextBlock"
+                        Text="{Binding SelectedCurrencyModel.Name}"
+                        FontSize="18px"
+                        Height="30"
+                        Margin="20,0,0,0"/>
+                <Button x:Name="GoToDetails"
+                        Command="{Binding ChangePageCommand}"
+                        Content="Show details"
+                        FontSize="18px"
+                        Height="30"
+                        Width="150"/>
+            </StackPanel>
+            <DataGrid ItemsSource="{Binding CurrenciesCollectionView}" 
+                  SelectedItem="{Binding Path=SelectedCurrencyModel}"
                   x:Name="MainLisBox" 
                   Grid.Row="1" 
                   Grid.Column="1" 
                   AutoGenerateColumns="False"
-                  FontSize="18px"
+                  FontSize="20.6px"
                   FontFamily="Times New Roman"
-                  Height="265">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Rank}" IsReadOnly="True" Header="Rank"/>
-                <DataGridTextColumn Binding="{Binding Name}" IsReadOnly="True" Header="Name"/>
-                <DataGridTextColumn Binding="{Binding Code}" IsReadOnly="True" Header="Code"/>
-                <DataGridTextColumn Binding="{Binding USDValue, StringFormat={}{0:0.####} $}" IsReadOnly="True" Header="Value in USD"/>
-            </DataGrid.Columns>
-            <DataGrid.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <VirtualizingStackPanel/>
-                </ItemsPanelTemplate>
-            </DataGrid.ItemsPanel>
-        </DataGrid>
+                  Height="300">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Rank}" Width="65" IsReadOnly="True" Header="Rank"/>
+                    <DataGridTextColumn Binding="{Binding Name}" Width="150" IsReadOnly="True" Header="Name"/>
+                    <DataGridTextColumn Binding="{Binding Code}" Width="200" IsReadOnly="True" Header="Code"/>
+                    <DataGridTextColumn Binding="{Binding USDValue, StringFormat={}{0:0.####} $}" Width="130" IsReadOnly="True" Header="Value in USD"/>
+                </DataGrid.Columns>
+                <DataGrid.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel/>
+                    </ItemsPanelTemplate>
+                </DataGrid.ItemsPanel>
+            </DataGrid>
+        </StackPanel>
+
+
     </Grid>
 </UserControl>

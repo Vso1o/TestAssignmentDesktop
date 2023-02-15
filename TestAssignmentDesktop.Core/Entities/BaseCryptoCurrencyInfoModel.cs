@@ -13,6 +13,10 @@ namespace TestAssignmentDesktop.Core.Entities
         public double USDValue { get; set; }
         public int Rank { get; set; }
 
+        public double? Volume { get; set; }
+
+        public double? PriceChange { get; set; }
+
         public override string ToString()
         {
             return $"Code = {CurrencyCode}, Name = {CurrencyName}, USD value = {USDValue}, Rank = {Rank}";

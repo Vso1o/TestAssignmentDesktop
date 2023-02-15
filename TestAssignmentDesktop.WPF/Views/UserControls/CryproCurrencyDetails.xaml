@@ -7,6 +7,43 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TextBlock Text="{Binding Id}"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100px"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="GoToHome"
+                        Command="{Binding ChangePageCommand}"
+                        Content="Home"
+                        FontSize="18px"
+                        Height="30"
+                        Width="100"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel x:Name="CCName" Margin="20" Orientation="Vertical">
+                <TextBlock Text="Name:" FontSize="18px"/>
+                <TextBlock Text="{Binding SelectedCurrencyModel.Name}" FontSize="18px"/>
+            </StackPanel>
+            <StackPanel x:Name="CCCode" Margin="20" Orientation="Vertical">
+                <TextBlock Text="Code:" FontSize="18px"/>
+                <TextBlock Text="{Binding SelectedCurrencyModel.Code}" FontSize="18px"/>
+            </StackPanel>
+            <StackPanel x:Name="CCPriceUSD" Margin="20" Orientation="Vertical">
+                <TextBlock Text="Price USD:" FontSize="18px"/>
+                <TextBlock Text="{Binding SelectedCurrencyModel.USDValue, StringFormat={}{0:0.####} $}" FontSize="18px"/>
+            </StackPanel>
+            <StackPanel x:Name="CCVolume" Margin="20" Orientation="Vertical">
+                <TextBlock Text="Volume:" FontSize="18px"/>
+                <TextBlock Text="{Binding SelectedCurrencyModel.Volume, StringFormat={}{0:0.##}}" FontSize="18px"/>
+            </StackPanel>
+            <StackPanel x:Name="CCPriceChange" Margin="20" Orientation="Vertical">
+                <TextBlock Text="PriceChange:" FontSize="18px"/>
+                <TextBlock Text="{Binding SelectedCurrencyModel.PriceChange, StringFormat={}{0:0.####}}" FontSize="18px"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </UserControl>
