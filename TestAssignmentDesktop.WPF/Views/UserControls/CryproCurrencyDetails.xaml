@@ -12,7 +12,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="140"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
@@ -21,7 +21,8 @@
                         Content="Home"
                         FontSize="18px"
                         Height="30"
-                        Width="100"/>
+                        Width="100"
+                        Margin="20"/>
 
         <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel x:Name="CCName" Margin="20" Orientation="Vertical">
@@ -43,6 +44,55 @@
             <StackPanel x:Name="CCPriceChange" Margin="20" Orientation="Vertical">
                 <TextBlock Text="PriceChange:" FontSize="18px"/>
                 <TextBlock Text="{Binding SelectedCurrencyModel.PriceChange, StringFormat={}{0:0.####}}" FontSize="18px"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">
+            <StackPanel x:Name="PriceComparer" Orientation="Horizontal" VerticalAlignment="Top">
+                <StackPanel x:Name="Instucrions" Margin="20" Orientation="Vertical">
+                    <TextBlock Text="Choose currency to convert prices"
+                           FontSize="18px"
+                           Width="200"
+                           TextWrapping="WrapWithOverflow"/>
+                    <ComboBox ItemsSource="{Binding CryptoCurrencyModels}"
+                          SelectedItem="{Binding SelectedForConversionCurrencyModel}"
+                          DisplayMemberPath="Name"
+                          Margin="0,20,0,0"/>
+                </StackPanel>
+
+                <StackPanel x:Name="Results" Margin="20" Orientation="Vertical">
+                    <TextBlock Text="{Binding ResultingString}"
+                           TextAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontSize="18px"
+                           Width="400"
+                           TextWrapping="WrapWithOverflow"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel x:Name="PriceComparer2" Orientation="Horizontal" VerticalAlignment="Top">
+                <StackPanel Margin="20" Orientation="Vertical">
+                    <TextBlock Text="{Binding RequestingString}"
+                           TextAlignment="Center"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           FontSize="18px"
+                           Width="200"
+                           TextWrapping="WrapWithOverflow"/>
+                    <TextBox Text="{Binding Quantity, UpdateSourceTrigger=PropertyChanged}"
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Left"
+                         FontSize="18px"
+                         Width="100"
+                         Margin="0,20,0,0"/>
+                </StackPanel>
+                <StackPanel x:Name="Results2" Margin="20" Orientation="Vertical">
+                    <TextBlock Text="{Binding ResultingStringDefinedQuantity}"
+                           TextAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontSize="18px"
+                           Width="400"
+                           TextWrapping="WrapWithOverflow"/>
+                </StackPanel>
             </StackPanel>
         </StackPanel>
     </Grid>
